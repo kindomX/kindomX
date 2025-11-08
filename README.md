@@ -1,4 +1,4 @@
-# React Electron BrowserView
+# yew
 
 __A simple wrapper of the Electron BrowserView element to allow it's magical props in React__
 
@@ -8,13 +8,13 @@ This package is made to be a drop-in replacement for the [react-electron-web-vie
 
 ## Installation
 ```
-npm install react-electron-browser-view
+npm install yew
 ```
 
 or
 
 ```
-yarn add react-electron-browser-view
+yarn add yew
 ```
 
 ## Example
@@ -30,7 +30,7 @@ All events and methods on the BrowserView element are proxied. See [#Events](#ev
 You can find the documentation on available events and methods [in the Electron docs](https://electronjs.org/docs/api/browser-view)
 
 ```JavaScript
-const BrowserView = require('react-electron-browser-view');
+const BrowserView = require('yew');
 
 <BrowserView
   src="https://www.google.com"
@@ -64,7 +64,7 @@ import { remote } from 'electron';
 const views = remote.BrowserView.getAllViews();
 views.forEach(view => view.destroy());
 ```
-This package will normally handle deleting views but sometimes - especially on reloads - `react-electron-browser-view` doesn't get unmounted correctly and leaves browser views behind.
+This package will normally handle deleting views but sometimes - especially on reloads - `yew` doesn't get unmounted correctly and leaves browser views behind.
 
 
 ### Properties
@@ -84,7 +84,7 @@ ones
 Behind the scenes this renders a div with the given size. It will then use use the position and size from this div to place the BrowserView right over it.
 
 #### Events
-This package will forward events fired by the BrowserView to your code. For a list of supported events, take a look at [constants.js](https://github.com/vantezzen/react-electron-browser-view/blob/master/src/constants.js#L3).
+This package will forward events fired by the BrowserView to your code. For a list of supported events, take a look at [constants.js](https://github.com/vantezzen/yew/blob/master/src/constants.js#L3).
 
 You can listen for events by adding a `on[Event name camel cased]` prop (e.g. `onLoadCommit`) to the component.
 
@@ -111,7 +111,7 @@ You can now use most BrowserView methods on this reference, e.g.
 this.webview.goBack();
 ```
 
-See [constance.js](https://github.com/vantezzen/react-electron-browser-view/blob/master/src/constants.js#L40) for the list of supported methods.
+See [constance.js](https://github.com/vantezzen/yew/blob/master/src/constants.js#L40) for the list of supported methods.
 
 Alternatively, you can get access to the original BrowserView instance via
 ```JavaScript
