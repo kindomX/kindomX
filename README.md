@@ -1,4 +1,4 @@
-# Competitive
+# ads
 
 __A simple wrapper of the Electron BrowserView element to allow it's magical props in React__
 
